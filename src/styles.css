@@ -1,0 +1,21 @@
+/* color palette: green to pink
+456941, 749c6f, eff0e7, fcc9ca, f299a5, e67384
+#456941, #749c6f, #eff0e7, #fcc9ca, #f299a5, #e67384
+0x456941, 0x749c6f, 0xeff0e7, 0xfcc9ca, 0xf299a5, 0xe67384
+*/
+
+body {
+    background-color: #eff0e7;
+}
+
+.title-bar {
+  background: linear-gradient(to right, #000000, #4a008f);
+  color: white;
+}
+
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
