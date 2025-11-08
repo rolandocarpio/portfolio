@@ -1,21 +1,97 @@
-/* color palette: green to pink
-456941, 749c6f, eff0e7, fcc9ca, f299a5, e67384
-#456941, #749c6f, #eff0e7, #fcc9ca, #f299a5, #e67384
-0x456941, 0x749c6f, 0xeff0e7, 0xfcc9ca, 0xf299a5, 0xe67384
-*/
+/* pip-boy-primary-color: #18dc0c;
+pip-boy-secondary-color: #11291b;
+pip-boy-background-color: #10170f; */
 
 body {
-    background-color: #eff0e7;
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    /* cursor: url("/nuke.png"), auto; */
+    /* overflow: hidden; */
 }
 
-.title-bar {
-  background: linear-gradient(to right, #000000, #4a008f);
-  color: white;
+.border {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
 }
 
+.monitor {
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    /* crt effect */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%,
+            transparent 50%);
+    background-size: 100% 7px; /* height of each scanline */
+}
 
-.prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 11.5vh;
+    width: 63vw;
+    height: 74vh;
+    box-sizing: border-box;
+    background-color: #10170fc0;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #18dc0c;
+    text-shadow: 0 0 10px #18dc0c;
+    box-shadow: inset 0 0 300px rgba(0,0,0,0.6);
+}
+
+.nav {
+    display: flex;
+    padding-left: 7%;
+    padding-right: 10%;
+}
+
+.bottom {
+    display: flex;
+    padding-left: 7%;
+    padding-right: 10%;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 3vh;
+    padding-left: 7%;
+    padding-right: 10%;
+}
+
+.footer h3 {
+    margin: 0.5rem;
+}
+
+.time {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 1vw;
+    background-color: #11291b;
+}
+
+.battery {
+    display: flex;
+    background-color: #11291b;
+}
+
+.cursor-blinker {
+    display: inline-block;
+    animation: blink 1s infinite;
+    /* animation: blink 0.4s steps(1, end) infinite; */ /* fast blinking */
+    }
+
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;} /* Cursor disappears halfway through the cycle */
 }
