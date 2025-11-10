@@ -1,6 +1,7 @@
 import React from "react";
-import "../../src/styles.css"
+import "../styles.css"
 import Footer from "./Footer";
+import Weather from "./Weather";
 
 export default function Screen() {
     return (

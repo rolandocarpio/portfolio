@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "../../src/styles.css"
+import Time from "./Time";
+import Battery from "./Battery";
+import Weather from "./Weather";
+import "../styles.css"
 
-export default function Time() {
+export default function Footer() {
     const currentDate = new Date();
     const ISODate = currentDate.toLocaleDateString("en-CA").split('T')[0];
     const [time, setTime] = useState(currentDate.toLocaleTimeString());
@@ -18,8 +21,14 @@ export default function Time() {
 
 
     return (
-        <div className="time">
-            <h3>{ISODate} {time}</h3>
+        <div className="footer">
+            <div className="start">
+                <Time />
+                <Battery />
+            </div>
+            <div className="end">
+                <Weather />
+            </div>
         </div>
     );
 }
