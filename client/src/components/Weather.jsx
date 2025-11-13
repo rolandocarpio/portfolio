@@ -27,7 +27,7 @@ export default function Weather() {
                 <p>Loading...</p>
             ) : (
                 <>
-                <h4>{weatherData.temperature}°F</h4>
+                <p>{weatherData.temperature}°F</p>
                 <img src={`https:${weatherData.icon}`} className="weather-icon" />
                 </>
             )}

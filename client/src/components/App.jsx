@@ -1,9 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "motion/react";
+import React from "react";
+import { BrowserRouter as Router} from "react-router-dom";
+import AnimatedRoutes from "./AnimatedRoutes";
 import Border from "./Border";
-import Screen from "./Screen";
 import "../styles.css"
 
 export default function App() {
-    return <div className="border"><Border /><Screen /></div>;
+    return (
+        <Router>
+            <div className="border">
+                <Border />
+                <AnimatedRoutes />
+            </div>
+        </Router>
+    );
 }

@@ -19,7 +19,7 @@ export default function Time() {
 
     return (
         <div className="time">
-            <h4>{ISODate} {time}</h4>
+            <p>{ISODate} {time}</p>
         </div>
     );
 }

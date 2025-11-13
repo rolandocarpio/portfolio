@@ -7,34 +7,42 @@ body {
     margin: 0;
     height: 100vh;
     /* cursor: url("/nuke.png"), auto; */
-    /* overflow: hidden; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #11291b;
 }
 
 .border {
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
-    pointer-events: none;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .monitor {
-    position: absolute;
+    position: fixed;
     width: 70vw;
     height: 100vh;
-    /* crt effect */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%,
-            transparent 50%);
-    background-size: 100% 7px; /* height of each scanline */
+    pointer-events: none;
+    z-index: 2;
 }
 
 .screen {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 11.5vh;
     width: 63vw;
     height: 74vh;
     box-sizing: border-box;
@@ -45,6 +53,17 @@ body {
     color: #18dc0c;
     text-shadow: 0 0 10px #18dc0c;
     box-shadow: inset 0 0 300px rgba(0,0,0,0.6);
+
+    /* crt effect */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%,
+            transparent 50%);
+    background-size: 100% 7px; /* height of each scanline */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .nav {
@@ -53,7 +72,16 @@ body {
     padding-right: 10%;
 }
 
-.bottom {
+.links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+    padding-right: 10%;
+    gap: 1vh;
+    font-size: 1.5rem;
+}
+
+.cursor-area {
     display: flex;
     padding-left: 7%;
     padding-right: 10%;
@@ -67,10 +95,13 @@ body {
     margin-bottom: 3vh;
     padding-left: 7%;
     padding-right: 10%;
+    padding-bottom: 5px;
+    font-size: 1rem;
 }
 
-.footer h4 {
+.footer p {
     margin: 0.5rem;
+    font-display: swap;
 }
 
 .start {
@@ -80,22 +111,24 @@ body {
 
 .time {
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0px 10px;
     background-color: #11291b;
 }
 
 .battery {
     display: flex;
+    padding: 0px 10px;
     background-color: #11291b;
 }
 
 .weather-container{
     display: flex;
+    padding: 0px 10px;
     background-color: #11291b;
 }
 
 .weather-icon {
+    padding-top: 6px;
     width: 24px;
     height: 24px;
 }
