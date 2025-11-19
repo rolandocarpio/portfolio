@@ -12,6 +12,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    letter-spacing: 3px;
 }
 
 a:visited {
@@ -19,7 +20,11 @@ a:visited {
 }
 
 a:hover {
-    background-color: #11291b;
+    background-color: #18dc0c;
+    color: black;
+    text-shadow: 0 0 10px black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+    background-size: 100% 4px; /* height of each scanline */
 }
 
 .border {
@@ -45,6 +50,8 @@ a:hover {
     flex-direction: column;
     width: 63vw;
     height: 74vh;
+    padding-left: 7%;
+    padding-right: 10%;
     box-sizing: border-box;
     background-color: #10170fc0;
     font-family: "Share Tech Mono", monospace;
@@ -57,7 +64,7 @@ a:hover {
     /* crt effect */
     background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%,
             transparent 50%);
-    background-size: 100% 7px; /* height of each scanline */
+    background-size: 100% 4px; /* height of each scanline */
 }
 
 .main {
@@ -66,25 +73,19 @@ a:hover {
     height: 100%;
 }
 
-.nav {
+.header {
     display: flex;
-    padding-left: 7%;
-    padding-right: 10%;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    padding-left: 7%;
-    padding-right: 10%;
     gap: 1vh;
     font-size: 1.5rem;
 }
 
 .cursor-area {
     display: flex;
-    padding-left: 7%;
-    padding-right: 10%;
 }
 
 .footer {
@@ -93,8 +94,6 @@ a:hover {
     justify-content: space-between;
     gap: 1vw;
     margin-bottom: 3vh;
-    padding-left: 7%;
-    padding-right: 10%;
     padding-bottom: 5px;
     font-size: 1rem;
 }
@@ -128,7 +127,7 @@ a:hover {
 }
 
 .weather-icon {
-    padding-top: 6px;
+    padding-top: 4px;
     width: 24px;
     height: 24px;
 }
