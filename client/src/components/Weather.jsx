@@ -6,7 +6,7 @@ export default function Weather() {
     const [weatherData, setWeatherData] = useState(null);
     const fetchWeather = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/");
+            const response = await axios.get(process.env.API_URL);
             const data = response.data;
             console.log(response.data);
             setWeatherData({
