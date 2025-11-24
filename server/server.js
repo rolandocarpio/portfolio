@@ -8,20 +8,31 @@ dotenv.config();
 const app = express();
 app.use(cors());
 
-app.get("/", async (req, res) => {
+// Health route
+app.get("/", (req, res) => {
+    res.json({ status: "ok" });
+});
+
+// Proxy route for weather data. Server-side keeps the API key secret and avoids CORS issues.
+app.get('/api/weather', async (req, res) => {
+    const q = req.query.q || 'auto:ip';
+    const apiUrl = process.env.WEATHER_API_BASE;
+
+    if (!process.env.WEATHER_API_KEY) {
+        return res.status(500).json({ error: 'Missing WEATHER_API_KEY on server' });
+    }
+
     try {
-        const response = await axios.get(
-            "http://api.weatherapi.com/v1/current.json",
-            {
-                params: {
-                    key: process.env.WEATHER_API_KEY,
-                    q: "auto:ip", // get location based on IP
-                },
-            }
-        );
+        const response = await axios.get(apiUrl, {
+            params: {
+                key: process.env.WEATHER_API_KEY,
+                q,
+            },
+        });
         res.json(response.data);
     } catch (error) {
-        res.status(500).json({ error: err.message });
+        console.error('Error fetching weather:', error?.message || error);
+        res.status(500).json({ error: error?.message || 'Unknown error' });
     }
 });
 

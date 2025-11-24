@@ -1,7 +1,7 @@
 import React from "react";
 import useSound from "use-sound";
-import highlight from "../../sounds/ui_pipboy_highlight.wav";
-import enter from "../../sounds/ui_hacking_charenter_01.wav";
+import highlight from "../../public/sounds/ui_pipboy_highlight.wav";
+import enter from "../../public/sounds/ui_hacking_charenter_01.wav";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import "../styles.css";

@@ -4,20 +4,26 @@ import "../styles.css"
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState(null);
+    const [error, setError] = useState(null);
+
     const fetchWeather = async () => {
         try {
-            const response = await axios.get(process.env.API_URL);
+            // Use Vite env var (must be prefixed VITE_) or fallback to relative proxy
+            const serverBase = import.meta.env.VITE_API_URL || '';
+            const base = serverBase.replace(/\/$/, '');
+            const url = base ? `${base}/api/weather` : `/api/weather`;
+            const response = await axios.get(url);
             const data = response.data;
-            console.log(response.data);
             setWeatherData({
-                temperature: Math.floor(data.current.temp_f),
-                icon: data.current.condition.icon,
-                isDay: data.current.is_day === 1,
+                temperature: Math.floor(data.current?.temp_f ?? data.current?.temp ?? 0),
+                icon: data.current?.condition?.icon ?? '',
+                isDay: data.current?.is_day === 1,
             });
-        } catch (error) {
-            console.error("Error fetching weather data:", error);
+        } catch (err) {
+            console.error('Error fetching weather data:', err);
+            setError(err?.message || 'Unknown error');
         }
-    }
+    };
     useEffect(() => {
         fetchWeather();
     }, []);
