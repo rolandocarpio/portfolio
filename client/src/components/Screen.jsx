@@ -1,7 +1,7 @@
 import React from "react";
 import useSound from "use-sound";
-import highlight from "../../public/sounds/ui_pipboy_highlight.wav";
-import enter from "../../public/sounds/ui_hacking_charenter_01.wav";
+import highlight from "/sounds/ui_pipboy_highlight.wav";
+import enter from "/sounds/ui_hacking_charenter_01.wav";
 import { Link } from "react-router-dom";
 import "../styles.css"
 import Footer from "./Footer";
@@ -17,9 +17,9 @@ export default function Screen() {
                     <h1>Welcome to ROBCO Industries (TM) Termlink</h1>
                 </div>
                 <div className="links">
-                    <Link to="/about" onClick={playEnter} onMouseEnter={() => play()}>[About Me]</Link>
-                    <Link to="/projects" onClick={playEnter} onMouseEnter={() => play()}>[Projects]</Link>
-                    <Link to="/contact" onClick={playEnter} onMouseEnter={() => play()}>[Contact]</Link>
+                    <Link to="/about" onClick={playEnter} onMouseEnter={() => play()}>[ABOUT ME]</Link>
+                    <Link to="/projects" onClick={playEnter} onMouseEnter={() => play()}>[PROJECTS]</Link>
+                    <Link to="/contact" onClick={playEnter} onMouseEnter={() => play()}>[CONTACT]</Link>
                 </div>
             </div>
             <div className="cursor-area">

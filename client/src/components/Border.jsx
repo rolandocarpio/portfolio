@@ -4,6 +4,6 @@ import "../styles.css"
 export default function Border() {
     return (
 
-        <img className="monitor" src="../../public/images/terminalwide.png" />
+        <img className="monitor" src="/images/terminalwide.png" />
     );
 }
