@@ -16,6 +16,7 @@ export default function Screen() {
                 <div className="header">
                     <h1>Welcome to ROBCO Industries (TM) Termlink</h1>
                 </div>
+                <hr />
                 <div className="links">
                     <Link to="/about" onClick={playEnter} onMouseEnter={() => play()}>[ABOUT ME]</Link>
                     <Link to="/projects" onClick={playEnter} onMouseEnter={() => play()}>[PROJECTS]</Link>

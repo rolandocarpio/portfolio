@@ -127,8 +127,16 @@ hr {
 .links {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* default left align */
     font-size: 1.5rem;
     margin-top: 0.5rem;
+}
+
+/* Make sure link text is centered when aligning items center */
+.links a {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -141,6 +149,25 @@ hr {
         margin-bottom: 0.75rem;
         margin-left: 0; /* use normal flow on small screens */
         justify-content: flex-start; /* left-align image column */
+    }
+    /* Make the screen wider on small viewports so content centers better */
+    .screen {
+        width: 94vw;
+    }
+    .monitor {
+        width: 100vw;
+    }
+    /* Mobile adjustments for the nav links */
+    .links {
+        align-items: center; /* center horizontally */
+        font-size: 2.25rem; /* larger text for mobile */
+        gap: 0.5rem; /* breathing room between links */
+    }
+    .links a {
+        text-align: center; /* center the anchor text */
+        width: fit-content; /* allow anchors to shrink to fit text */
+        padding: 6px 10px; /* increase tap target */
+        display: inline-block;
     }
 }
 
