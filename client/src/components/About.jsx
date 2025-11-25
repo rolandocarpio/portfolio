@@ -1,5 +1,6 @@
 import React from "react";
 import useSound from "use-sound";
+import { motion } from "framer-motion";
 import highlight from "/sounds/ui_pipboy_highlight.wav";
 import enter from "/sounds/ui_hacking_charenter_01.wav";
 import { Link } from "react-router-dom";
@@ -16,8 +17,24 @@ export default function About() {
                 <div className="header">
                     <h1>ABOUT ME</h1>
                 </div>
-                <p>This is the About Me page.</p>
+                <hr />
+                <div className="about-section">
+                    <div className="about-text">
+                        <pre className="about-pre">
+                            {`NAME: Rolando Carpio
+LOCATION: Los Angeles, CA
+SKILLS: JavaScript | React | Node.js | Express | MongoDB | HTML | CSS
+EDUCATION: B.S. in Computer Science (in progress) - Cal Poly Pomona
+HOBBIES: Gaming, Hiking, Streetwear, Hot Dogs
+`}
+                        </pre>
+                    </div>
+                    <motion.div whileHover={{scale: 1.5}} className="about-image">
+                        <img src="/images/pfp.jpg" alt="Rolando Carpio profile" />
+                    </motion.div>
+                </div>
                 <div className="links">
+                    <a href="https://drive.google.com/file/d/1sgXtUVwlDL2-W6CrKjvkq3owXDDZQiSa/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[RESUME]</a>
                     <Link to="/" onClick={playEnter} onMouseEnter={() => play()}>[HOME]</Link>
                 </div>
             </div>
