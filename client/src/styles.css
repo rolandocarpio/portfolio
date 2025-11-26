@@ -152,7 +152,7 @@ hr {
     }
     /* Make the screen wider on small viewports so content centers better */
     .screen {
-        width: 94vw;
+        width: 88vw;
     }
     .monitor {
         width: 100vw;
@@ -160,6 +160,8 @@ hr {
     /* Mobile adjustments for the nav links */
     .links {
         align-items: center; /* center horizontally */
+        justify-content: center; /* center vertically within its available space */
+        flex: 1; /* allow the links container to grow and fill the available vertical space */
         font-size: 2.25rem; /* larger text for mobile */
         gap: 0.5rem; /* breathing room between links */
     }
@@ -199,6 +201,7 @@ hr {
     display: flex;
     padding: 0px 10px;
     background-color: #11291b;
+    white-space: nowrap;
 }
 
 .battery {
