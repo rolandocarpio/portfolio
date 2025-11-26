@@ -23,8 +23,10 @@ export default function About() {
                         <pre className="about-pre">
                             {`NAME: Rolando Carpio
 LOCATION: Los Angeles, CA
-SKILLS: JavaScript, React, Node.js, Express, MongoDB, HTML, CSS
-EDUCATION: B.S. in Computer Science (in progress) - Cal Poly Pomona
+SKILLS: JavaScript, React, Node.js, Express, MongoDB,
+HTML, CSS
+EDUCATION: B.S. in Computer Science (in progress) - 
+Cal Poly Pomona
 HOBBIES: Gaming, Hiking, Streetwear, Hot Dogs
 `}
                         </pre>
