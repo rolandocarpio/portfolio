@@ -76,6 +76,9 @@ a:hover {
 
 .header {
     display: flex;
+    justify-content: center; /* horizontally center header contents */
+    align-items: center; /* vertically center if header grows */
+    text-align: center; /* fallback for non-flex contexts */
     white-space: nowrap;
 }
 
@@ -131,6 +134,7 @@ hr {
     align-items: flex-start; /* default left align */
     font-size: 1.5rem;
     margin-top: 0.5rem;
+    gap: 0.5rem;
 }
 
 /* Make sure link text is centered when aligning items center */
@@ -140,6 +144,11 @@ hr {
     width: 100%;
 }
 
+/* Add extra spacing above the home link to visually separate it from the list */
+.links a.home-link {
+    margin-top: 1rem; /* Increase gap between other links and home */
+}
+
 @media (max-width: 600px) {
     /* Make the screen wider on small viewports so content centers better */
     .screen {
@@ -147,7 +156,7 @@ hr {
     }
     .header {
         text-align: center;
-        white-space: wrap;
+        white-space: normal;
     }
     .monitor {
         width: 100vw;
@@ -158,13 +167,17 @@ hr {
         justify-content: center; /* center vertically within its available space */
         flex: 1; /* allow the links container to grow and fill the available vertical space */
         font-size: 2.25rem; /* larger text for mobile */
-        gap: 0.5rem; /* breathing room between links */
     }
     .links a {
         text-align: center; /* center the anchor text */
         width: fit-content; /* allow anchors to shrink to fit text */
         padding: 6px 10px; /* increase tap target */
         display: inline-block;
+    }
+
+    /* Keep home spacing on mobile, and grow gap a bit for touch comfort */
+    .links a.home-link {
+        margin-top: 1.25rem;
     }
     .about-section {
         flex-direction: column; /* stack image under text */
@@ -184,7 +197,8 @@ hr {
         margin: 0; /* reduce margin on small screens */
     }
     /* Hide footer on About page for small screens only */
-    .about-screen .footer {
+    .about-screen .footer,
+    .contact-screen .footer {
         display: none;
     }
 }

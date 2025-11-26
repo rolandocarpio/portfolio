@@ -11,14 +11,18 @@ export default function Contact() {
     const [playEnter] = useSound(enter, { volume: 0.25 });
 
     return (
-        <div className="screen">
+        <div className="screen contact-screen">
             <div className="main">
                 <div className="header">
-                    <h1>CONTACT</h1>
+                    <h1>CONTACT ME</h1>
                 </div>
-                <p>This is the Contact page.</p>
+                <hr />
                 <div className="links">
-                    <Link to="/" onClick={playEnter} onMouseEnter={() => play()}>[CONTACT]</Link>
+                    <a href="https://drive.google.com/file/d/1sgXtUVwlDL2-W6CrKjvkq3owXDDZQiSa/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[RESUME]</a>
+                    <a href="https://www.linkedin.com/in/rolando-c/" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[LINKEDIN]</a>
+                    <a href="https://www.github.com/rolandocarpio" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[GITHUB]</a>
+                    <a href="mailto:rcarpiodev@gmail.com" onClick={playEnter} onMouseEnter={() => play()}>[EMAIL ME]</a>
+                    <Link to="/" className="home-link" onClick={playEnter} onMouseEnter={() => play()}>[HOME]</Link>
                 </div>
             </div>
             <Footer />
