@@ -6,6 +6,7 @@ body {
     background-color: black;
     margin: 0;
     height: 100vh;
+    height: 100dvh;
     /* cursor: url("/nuke.png"), auto; */
 }
 
@@ -33,6 +34,7 @@ a:hover {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -41,6 +43,7 @@ a:hover {
     position: fixed;
     width: 70vw;
     height: 100vh;
+    height: 100dvh;
     pointer-events: none;
     z-index: 2;
 }
@@ -149,18 +152,8 @@ hr {
     margin-top: 1rem; /* Increase gap between other links and home */
 }
 
-@supports (-webkit-touch-callout: none) {
-  .screen {
-    height: -webkit-fill-available;
-  }
-}
-
-
 @media (max-width: 600px) {
     /* Make the screen wider on small viewports so content centers better */
-    .body {
-        min-height: calc(100vh - env(safe-area-inset-bottom));
-    }
     .screen {
         width: 88vw;
     }
