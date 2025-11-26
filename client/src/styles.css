@@ -198,7 +198,8 @@ hr {
     }
     /* Hide footer on About page for small screens only */
     .about-screen .footer,
-    .contact-screen .footer {
+    .contact-screen .footer,
+    .projects-screen .footer {
         display: none;
     }
 }

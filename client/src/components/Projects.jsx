@@ -11,7 +11,7 @@ export default function Projects() {
     const [playEnter] = useSound(enter, { volume: 0.25 });
 
     return (
-        <div className="screen">
+        <div className="screen projects-screen">
             <div className="main">
                 <div className="header">
                     <h1>PROJECTS</h1>
