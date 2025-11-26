@@ -76,6 +76,7 @@ a:hover {
 
 .header {
     display: flex;
+    white-space: nowrap;
 }
 
 hr {
@@ -153,6 +154,10 @@ hr {
     /* Make the screen wider on small viewports so content centers better */
     .screen {
         width: 88vw;
+    }
+    .header {
+        text-align: center;
+        white-space: wrap;
     }
     .monitor {
         width: 100vw;

@@ -14,7 +14,7 @@ export default function Screen() {
         <div className="screen">
             <div className="main">
                 <div className="header">
-                    <h1>Welcome to ROBCO Industries (TM) Termlink</h1>
+                    <h1>VAULT-TEC PERSONAL DATABASE INTERFACE v1.0</h1>
                 </div>
                 <hr />
                 <div className="links">
