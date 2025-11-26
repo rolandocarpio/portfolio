@@ -12,7 +12,7 @@ export default function About() {
     const [playEnter] = useSound(enter, { volume: 0.25 });
 
     return (
-        <div className="screen">
+        <div className="screen about-screen">
             <div className="main">
                 <div className="header">
                     <h1>ABOUT ME</h1>
@@ -23,7 +23,7 @@ export default function About() {
                         <pre className="about-pre">
                             {`NAME: Rolando Carpio
 LOCATION: Los Angeles, CA
-SKILLS: JavaScript | React | Node.js | Express | MongoDB | HTML | CSS
+SKILLS: JavaScript, React, Node.js, Express, MongoDB, HTML, CSS
 EDUCATION: B.S. in Computer Science (in progress) - Cal Poly Pomona
 HOBBIES: Gaming, Hiking, Streetwear, Hot Dogs
 `}
@@ -34,7 +34,6 @@ HOBBIES: Gaming, Hiking, Streetwear, Hot Dogs
                     </motion.div>
                 </div>
                 <div className="links">
-                    <a href="https://drive.google.com/file/d/1sgXtUVwlDL2-W6CrKjvkq3owXDDZQiSa/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[RESUME]</a>
                     <Link to="/" onClick={playEnter} onMouseEnter={() => play()}>[HOME]</Link>
                 </div>
             </div>

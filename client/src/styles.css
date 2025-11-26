@@ -141,16 +141,6 @@ hr {
 }
 
 @media (max-width: 600px) {
-    .about-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .about-image {
-        order: -1; /* show image above text on small screens */
-        margin-bottom: 0.75rem;
-        margin-left: 0; /* use normal flow on small screens */
-        justify-content: flex-start; /* left-align image column */
-    }
     /* Make the screen wider on small viewports so content centers better */
     .screen {
         width: 88vw;
@@ -175,6 +165,27 @@ hr {
         width: fit-content; /* allow anchors to shrink to fit text */
         padding: 6px 10px; /* increase tap target */
         display: inline-block;
+    }
+    .about-section {
+        flex-direction: column; /* stack image under text */
+        align-items: center; /* center both text and image horizontally */
+        justify-content: center;
+        width: 90%;
+        margin: 0; /* reduce margin on small screens */
+    }
+    .about-text {
+        flex-basis: auto;
+        text-align: left; /* center the text when stacked */
+    }
+    .about-pre {
+        line-height: 1.5;
+    }
+    .about-image {
+        margin: 0; /* reduce margin on small screens */
+    }
+    /* Hide footer on About page for small screens only */
+    .about-screen .footer {
+        display: none;
     }
 }
 
