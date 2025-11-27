@@ -54,7 +54,8 @@ a:hover {
     width: 63vw;
     height: 74vh;
     height: 74dvh;
-    padding-left: 8%;
+    padding-left: 9%;
+    padding-right: 9%;
     box-sizing: border-box;
     background-color: #10170fc0;
     font-family: "Share Tech Mono", monospace;
@@ -161,6 +162,7 @@ hr {
     .header {
         text-align: center;
         white-space: normal;
+        font-size: 0.75rem;
     }
     .monitor {
         width: 109vw;
