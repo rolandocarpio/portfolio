@@ -16,6 +16,7 @@ export default function Projects() {
                 <div className="header">
                     <h1>PROJECTS</h1>
                 </div>
+                <hr />
                 <p>This is the Projects page.</p>
                 <div className="links">
                     <Link to="/" onClick={playEnter} onMouseEnter={() => play()}>[HOME]</Link>

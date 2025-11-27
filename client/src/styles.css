@@ -153,66 +153,6 @@ hr {
     margin-top: 1rem; /* Increase gap between other links and home */
 }
 
-@media (max-width: 600px) {
-    /* Make the screen wider on small viewports so content centers better */
-    .screen {
-        width: 100vw;
-        height: 74dvh;
-    }
-    .header {
-        text-align: center;
-        white-space: normal;
-        font-size: 0.75rem;
-    }
-    .monitor {
-        width: 109vw;
-    }
-    /* Mobile adjustments for the nav links */
-    .links {
-        align-items: center; /* center horiontally */
-        justify-content: center; /* center vertically within its available space */
-        flex: 1; /* allow the links container to grow and fill the available vertical space */
-        font-size: 1.75rem; /* larger text for mobile */
-    }
-    .links a {
-        text-align: center; /* center the anchor text */
-        width: fit-content; /* allow anchors to shrink to fit text */
-        padding: 6px 10px; /* increase tap target */
-        display: inline-block;
-    }
-
-    /* Keep home spacing on mobile, and grow gap a bit for touch comfort */
-    .links a.home-link {
-        margin-top: 1.25rem;
-    }
-    .about-section {
-        flex-direction: column; /* stack image under text */
-        align-items: center; /* center both text and image horizontally */
-        justify-content: center;
-        margin: 0; /* reduce margin on small screens */
-    }
-    .about-text {
-        flex-basis: auto;
-        text-align: left; /* center the text when stacked */
-    }
-    .about-pre {
-        line-height: 1.5;
-    }
-    .about-image {
-        margin: 0; /* reduce margin on small screens */
-    }
-    /* Hide footer on About page for small screens only */
-    .about-screen .footer,
-    .contact-screen .footer,
-    .projects-screen .footer {
-        display: none;
-    }
-}
-
-.cursor-area {
-    display: flex;
-}
-
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -227,6 +167,11 @@ hr {
     margin: 0.5rem;
     font-display: swap;
 }
+
+.cursor-area {
+    display: flex;
+}
+
 
 .start {
     display: flex;
@@ -263,6 +208,72 @@ hr {
     animation: blink 1s infinite;
     /* animation: blink 0.4s steps(1, end) infinite; */ /* fast blinking */
     }
+
+@media (max-width: 600px) {
+    /* Make the screen wider on small viewports so content centers better */
+    .screen {
+        width: 100vw;
+        height: 74dvh;
+    }
+    .header {
+        text-align: center;
+        white-space: normal;
+        font-size: 0.5rem;
+    }
+    .monitor {
+        width: 109vw;
+    }
+    /* Mobile adjustments for the nav links */
+    .links {
+        align-items: center; /* center horiontally */
+        justify-content: center; /* center vertically within its available space */
+        flex: 1; /* allow the links container to grow and fill the available vertical space */
+        font-size: 1.5rem; /* larger text for mobile */
+    }
+    .links a {
+        text-align: center; /* center the anchor text */
+        width: fit-content; /* allow anchors to shrink to fit text */
+        padding: 6px 10px; /* increase tap target */
+        display: inline-block;
+    }
+
+    /* Keep home spacing on mobile, and grow gap a bit for touch comfort */
+    .links a.home-link {
+        margin-top: 1.25rem;
+    }
+    .about-section {
+        flex-direction: column; /* stack image under text */
+        align-items: center; /* center both text and image horizontally */
+        justify-content: center;
+        margin: 0; /* reduce margin on small screens */
+    }
+    .about-text {
+        flex-basis: auto;
+        text-align: left; /* center the text when stacked */
+    }
+    .about-pre {
+        font-size: 0.75rem;
+        line-height: 1.1;
+    }
+    .about-image {
+        margin: 0; /* reduce margin on small screens */
+    }
+    .about-image img {
+        max-width: 100px;
+    }
+    /* Hide footer on About page for small screens only */
+    .about-screen .footer,
+    .contact-screen .footer,
+    .projects-screen .footer {
+        display: none;
+    }
+    /* Footer font-size override for mobile */
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.75rem;
+    }
+}
 
 @keyframes blink {
     0%, 100% {opacity: 1;}
