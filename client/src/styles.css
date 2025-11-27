@@ -53,8 +53,8 @@ a:hover {
     flex-direction: column;
     width: 63vw;
     height: 74vh;
-    padding-left: 7%;
-    padding-right: 10%;
+    height: 74dvh;
+    padding-left: 8%;
     box-sizing: border-box;
     background-color: #10170fc0;
     font-family: "Share Tech Mono", monospace;
@@ -126,7 +126,7 @@ hr {
 
 .about-image img {
     border-radius: 10px;
-    max-width: 200px;
+    max-width: 150px;
     width: 100%;
     height: auto;
 }
@@ -155,21 +155,22 @@ hr {
 @media (max-width: 600px) {
     /* Make the screen wider on small viewports so content centers better */
     .screen {
-        width: 88vw;
+        width: 100vw;
+        height: 74dvh;
     }
     .header {
         text-align: center;
         white-space: normal;
     }
     .monitor {
-        width: 100vw;
+        width: 109vw;
     }
     /* Mobile adjustments for the nav links */
     .links {
-        align-items: center; /* center horizontally */
+        align-items: center; /* center horiontally */
         justify-content: center; /* center vertically within its available space */
         flex: 1; /* allow the links container to grow and fill the available vertical space */
-        font-size: 2.25rem; /* larger text for mobile */
+        font-size: 1.75rem; /* larger text for mobile */
     }
     .links a {
         text-align: center; /* center the anchor text */
@@ -196,7 +197,6 @@ hr {
         line-height: 1.5;
     }
     .about-image {
-        width: 300px;
         margin: 0; /* reduce margin on small screens */
     }
     /* Hide footer on About page for small screens only */
