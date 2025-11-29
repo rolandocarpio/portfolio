@@ -83,7 +83,6 @@ a:hover {
     justify-content: center; /* horizontally center header contents */
     align-items: center; /* vertically center if header grows */
     text-align: center; /* fallback for non-flex contexts */
-    white-space: nowrap;
 }
 
 hr {

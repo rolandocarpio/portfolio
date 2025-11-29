@@ -17,7 +17,7 @@ export default function Projects() {
                     <h1>PROJECTS</h1>
                 </div>
                 <hr />
-                <p>This is the Projects page.</p>
+                <p>In progress...</p>
                 <div className="links">
                     <Link to="/" onClick={playEnter} onMouseEnter={() => play()}>[HOME]</Link>
                 </div>
