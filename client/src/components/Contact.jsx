@@ -18,7 +18,7 @@ export default function Contact() {
                 </div>
                 <hr />
                 <div className="links">
-                    <a href="https://drive.google.com/file/d/1sgXtUVwlDL2-W6CrKjvkq3owXDDZQiSa/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[RESUME]</a>
+                    <a href="https://drive.google.com/file/d/1hFsbHIYC-XOQYEqTQAUfQYkYUU1y4vXA/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[RESUME]</a>
                     <a href="https://www.linkedin.com/in/rolando-c/" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[LINKEDIN]</a>
                     <a href="https://www.github.com/rolandocarpio" target="_blank" rel="noopener noreferrer" onClick={playEnter} onMouseEnter={() => play()}>[GITHUB]</a>
                     <a href="mailto:rcarpiodev@gmail.com" onClick={playEnter} onMouseEnter={() => play()}>[EMAIL ME]</a>
