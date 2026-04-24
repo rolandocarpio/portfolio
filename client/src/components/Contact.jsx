@@ -9,7 +9,7 @@ import "../styles.css";
 const channels = [
     {
         label: "RESUME",
-        href: "https://drive.google.com/file/d/1hFsbHIYC-XOQYEqTQAUfQYkYUU1y4vXA/view?usp=sharing",
+        href: "https://drive.google.com/file/d/1-Wf5NV9WOMVZQDX4RtnbBm4eOvC3Tyvf/view?usp=sharing",
         desc: "Full work history and credentials",
     },
     {
