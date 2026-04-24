@@ -21,7 +21,7 @@ export default function About() {
                 <div className="about-section">
                     <div className="about-text">
                         <p className="about-bio">
-                            Full-stack developer based in Los Angeles, currently studying Computer Science at Cal Poly Pomona.
+                            Full-stack developer based in Los Angeles, CA.
                         </p>
                         <div className="about-stats">
                             <div className="about-stat">
@@ -34,7 +34,7 @@ export default function About() {
                             </div>
                             <div className="about-stat">
                                 <span className="stat-label">EDUCATION...:</span>
-                                <span className="stat-value">B.S. Computer Science (in progress) — Cal Poly Pomona</span>
+                                <span className="stat-value">B.S. Computer Science — Cal Poly Pomona</span>
                             </div>
                             <div className="about-stat">
                                 <span className="stat-label">INTERESTS...:</span>
