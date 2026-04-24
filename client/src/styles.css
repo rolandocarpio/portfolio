@@ -450,24 +450,99 @@ hr {
         margin-top: 1.25rem;
     }
     .about-section {
-        flex-direction: column; /* stack image under text */
-        align-items: center; /* center both text and image horizontally */
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        margin: 0; /* reduce margin on small screens */
+        margin: 0;
     }
     .about-text {
         flex-basis: auto;
-        text-align: left; /* center the text when stacked */
+        text-align: left;
+        width: 100%;
     }
     .about-pre {
         font-size: 0.75rem;
         line-height: 1.1;
     }
     .about-image {
-        margin: 0; /* reduce margin on small screens */
+        order: -1;
+        margin: 0 0 0rem 0;
     }
     .about-image img {
-        max-width: 100px;
+        max-width: 80px;
+        border-radius: 6px;
+    }
+    .about-bio {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .about-stats {
+        gap: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .about-stat {
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    .about-skills-section {
+        gap: 0.3rem;
+    }
+    .skill-tag {
+        font-size: 0.65rem;
+        padding: 0.1rem 0.3rem;
+    }
+    .about-screen .main {
+        overflow-y: auto;
+    }
+    /* Projects page mobile adjustments */
+    .projects-screen .links {
+        flex: 0 0 auto;
+        margin-top: 0;
+    }
+    .projects-screen .links a.home-link {
+        margin-top: 0;
+    }
+    /* Contact page mobile adjustments */
+    .contact-screen .about-bio {
+        text-align: center;
+    }
+    .contact-channels {
+        gap: 1rem;
+        align-items: center;
+    }
+    .contact-channel {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+    }
+    .contact-channel a {
+        min-width: unset;
+        font-size: 1.2rem;
+    }
+    .channel-desc {
+        font-size: 0.7rem;
+    }
+    .contact-screen .links a.home-link {
+        margin-top: 0;
+    }
+    .project-card {
+        padding: 0.5rem 0.75rem 1rem 0.75rem;
+    }
+    .project-card-header {
+        font-size: 0.85rem;
+    }
+    .project-meta {
+        font-size: 0.75rem;
+    }
+    .project-preview {
+        max-height: 120px;
+    }
+    .project-desc {
+        font-size: 0.75rem;
     }
     /* Hide footer on About page for small screens only */
     .about-screen .footer,
@@ -490,6 +565,34 @@ hr {
     .cursor-area h3 {
         margin: 0.25rem 0;
         font-size: 0.9rem;
+    }
+    .help-hint {
+        display: none;
+    }
+    /* Home page mobile adjustments */
+    .boot-message {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .nav-menu {
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .nav-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.15rem;
+    }
+    .nav-item a {
+        min-width: unset;
+        font-size: 1.2rem;
+    }
+    .nav-desc {
+        font-size: 0.7rem;
+    }
+    .help-hint {
+        text-align: center;
     }
 }
 
