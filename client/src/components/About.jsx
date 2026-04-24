@@ -20,16 +20,35 @@ export default function About() {
                 <hr />
                 <div className="about-section">
                     <div className="about-text">
-                        <pre className="about-pre">
-                            {`NAME: Rolando Carpio
-LOCATION: Los Angeles, CA
-SKILLS: JavaScript, React, Node.js, Express, MongoDB,
-HTML, CSS
-EDUCATION: B.S. in Computer Science (in progress) - 
-Cal Poly Pomona
-HOBBIES: Gaming, Hiking, Streetwear, Hot Dogs
-`}
-                        </pre>
+                        <p className="about-bio">
+                            Full-stack developer based in Los Angeles, currently studying Computer Science at Cal Poly Pomona.
+                        </p>
+                        <div className="about-stats">
+                            <div className="about-stat">
+                                <span className="stat-label">NAME........:</span>
+                                <span className="stat-value">Rolando Carpio</span>
+                            </div>
+                            <div className="about-stat">
+                                <span className="stat-label">LOCATION....:</span>
+                                <span className="stat-value">Los Angeles, CA</span>
+                            </div>
+                            <div className="about-stat">
+                                <span className="stat-label">EDUCATION...:</span>
+                                <span className="stat-value">B.S. Computer Science (in progress) — Cal Poly Pomona</span>
+                            </div>
+                            <div className="about-stat">
+                                <span className="stat-label">INTERESTS...:</span>
+                                <span className="stat-value">Gaming / Hiking / Streetwear / Hot Dogs</span>
+                            </div>
+                        </div>
+                        <div className="about-skills-section">
+                            <span className="stat-label">&gt; SKILLS</span>
+                            <div className="about-skills">
+                                {["JavaScript", "React", "Node.js", "Express", "MongoDB", "HTML", "CSS", "PHP", "WordPress"].map((s) => (
+                                    <span className="skill-tag" key={s}>{s}</span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                     <motion.div whileHover={{scale: 1.5}} className="about-image">
                         <img src="/images/pfp.jpg" alt="Rolando Carpio profile" />

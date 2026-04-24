@@ -6,6 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles.css"
 import Footer from "./Footer";
 
+const bootLines = [
+    "INITIALIZING VAULT-TEC INTERFACE...",
+    "AUTHENTICATING USER................. OK",
+    "LOADING PERSONNEL FILES............. OK",
+    "SYSTEM READY.",
+];
+
 export default function Screen() {
     const [play, { stop }] = useSound(highlight, { volume: 0.25 });
     const [playEnter] = useSound(enter, { volume: 0.25 });
@@ -13,6 +20,9 @@ export default function Screen() {
     const [history, setHistory] = useState([]);
     const [easterEggTriggered, setEasterEggTriggered] = useState(false);
     const [showEasterEgg, setShowEasterEgg] = useState("");
+    const [typedLines, setTypedLines] = useState([]);
+    const [currentLineText, setCurrentLineText] = useState("");
+    const [navVisible, setNavVisible] = useState(false);
     const screenRef = useRef(null);
     const navigate = useNavigate();
 
@@ -73,6 +83,35 @@ export default function Screen() {
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [input, playEnter]);
+
+    // Boot sequence typewriter animation
+    useEffect(() => {
+        let lineIdx = 0;
+        let charIdx = 0;
+        let timerId;
+
+        const type = () => {
+            if (lineIdx >= bootLines.length) {
+                timerId = setTimeout(() => setNavVisible(true), 200);
+                return;
+            }
+            const line = bootLines[lineIdx];
+            if (charIdx < line.length) {
+                setCurrentLineText(line.slice(0, charIdx + 1));
+                charIdx++;
+                timerId = setTimeout(type, 8);
+            } else {
+                setTypedLines(prev => [...prev, line]);
+                setCurrentLineText("");
+                lineIdx++;
+                charIdx = 0;
+                timerId = setTimeout(type, 60);
+            }
+        };
+
+        timerId = setTimeout(type, 100);
+        return () => clearTimeout(timerId);
+    }, []);
 
     // Find matching command with partial input
     const findMatchingCommand = (input) => {
@@ -148,28 +187,34 @@ export default function Screen() {
                 <hr />
                 
                 {/* History display */}
-                <div style={{ 
-                    flex: 1, 
-                    overflowY: "auto", 
-                    marginBottom: "1rem",
-                    fontFamily: "Share Tech Mono, monospace",
-                    whiteSpace: "pre-wrap",
-                    wordWrap: "break-word",
-                    wordBreak: "break-word",
-                    fontSize: "clamp(0.7rem, 2vw, 0.95rem)",
-                    lineHeight: "1.4",
-                    overflowWrap: "break-word"
-                }}>
+                <div className="terminal-history">
                     {history.length === 0 && (
                         <div>
-                            <div className="links">
-                                <Link to="/about" onClick={playEnter} onMouseEnter={() => play()}>[ABOUT ME]</Link>
-                                <Link to="/projects" onClick={playEnter} onMouseEnter={() => play()}>[PROJECTS]</Link>
-                                <Link to="/contact" onClick={playEnter} onMouseEnter={() => play()}>[CONTACT]</Link>
+                            <div className="boot-message">
+                                {typedLines.map((line, i) => (
+                                    <div key={i}>{line}</div>
+                                ))}
+                                {currentLineText && <div>{currentLineText}<span className="cursor-blinker">▌</span></div>}
                             </div>
-                            <p style={{ marginTop: "1.5rem", fontSize: "clamp(0.7rem, 1.5vw, 0.85rem)", color: "#18dc0c" }}>
-                                Type HELP for available commands
-                            </p>
+                            {navVisible && (
+                                <>
+                                    <div className="nav-menu nav-menu-animated">
+                                        <div className="nav-item">
+                                            <Link to="/about" onClick={playEnter} onMouseEnter={() => play()}>[ABOUT ME]</Link>
+                                            <span className="nav-desc">— Personnel file</span>
+                                        </div>
+                                        <div className="nav-item">
+                                            <Link to="/projects" onClick={playEnter} onMouseEnter={() => play()}>[PROJECTS]</Link>
+                                            <span className="nav-desc">— Completed assignments</span>
+                                        </div>
+                                        <div className="nav-item">
+                                            <Link to="/contact" onClick={playEnter} onMouseEnter={() => play()}>[CONTACT]</Link>
+                                            <span className="nav-desc">— Open transmission channels</span>
+                                        </div>
+                                    </div>
+                                    <p className="help-hint nav-menu-animated">Type HELP for available commands</p>
+                                </>
+                            )}
                         </div>
                     )}
                     {history.map((line, idx) => (
@@ -179,22 +224,9 @@ export default function Screen() {
 
                 {/* Input area */}
                 <div className="cursor-area">
-                    <h3 style={{ 
-                        margin: 0, 
-                        display: "flex",
-                        fontSize: "clamp(0.8rem, 2.5vw, 1.2rem)",
-                        alignItems: "flex-start",
-                        gap: "0.25rem"
-                    }}>
+                    <h3 className="terminal-prompt">
                         &gt;
-                        <span style={{ 
-                            flex: 1, 
-                            whiteSpace: "pre-wrap", 
-                            wordBreak: "break-all",
-                            overflowWrap: "break-word"
-                        }}>
-                            {input}
-                        </span>
+                        <span className="terminal-input">{input}</span>
                         <span className="cursor-blinker">&#9646;</span>
                     </h3>
                 </div>
