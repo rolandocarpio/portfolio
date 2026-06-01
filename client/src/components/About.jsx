@@ -21,7 +21,7 @@ export default function About() {
                 <div className="about-section">
                     <div className="about-text">
                         <p className="about-bio">
-                            Full-stack developer based in Los Angeles, CA.
+                            Frontend developer based in Los Angeles, CA.
                         </p>
                         <div className="about-stats">
                             <div className="about-stat">

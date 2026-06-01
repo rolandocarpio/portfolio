@@ -28,7 +28,7 @@ export default function Screen() {
 
     // Easter eggs
     const easterEggs = {
-        "help": "AVAILABLE COMMANDS:\n> ABOUT - Navigate to about section\n> PROJECTS - View projects\n> CONTACT - Get in touch\n> CLEAR - Clear terminal\n> WHOAMI - Identify user\n> STAT - Display system stats\n> HACK - Attempt vault hack...",
+        "help": "AVAILABLE COMMANDS:\n> ABOUT - Navigate to about section\n> PROJECTS - View projects\n> CONTACT - Get in touch\n> GUESTBOOK - Sign the visitor log\n> CLEAR - Clear terminal\n> WHOAMI - Identify user\n> STAT - Display system stats\n> HACK - Attempt vault hack...",
         "whoami": "USER: Rolando Carpio\nSTATUS: Full Stack Developer\nLOCATION: The Wasteland\nAFFILIATION: Vault 101",
         "stat": "SYSTEM STATS:\n- STRENGTH: 6/10\n- PERCEPTION: 7/10\n- ENDURANCE: 8/10\n- CHARISMA: 6/10\n- INTELLIGENCE: 8/10\n- AGILITY: 7/10\n- LUCK: 10/10",
         "hack": "INITIATING VAULT HACK SEQUENCE...\n[████████░░] 80%\n[ERROR] Admin authentication required\nHACK FAILED - Vault secure",
@@ -116,7 +116,7 @@ export default function Screen() {
     // Find matching command with partial input
     const findMatchingCommand = (input) => {
         const trimmed = input.trim().toLowerCase();
-        const allCommands = ["clear", "about", "projects", "contact", ...Object.keys(easterEggs)];
+        const allCommands = ["clear", "about", "projects", "contact", "guestbook", ...Object.keys(easterEggs)];
         
         // Exact match
         if (allCommands.includes(trimmed)) {
@@ -152,13 +152,16 @@ export default function Screen() {
         } else if (matchedCmd === "contact") {
             playEnter();
             navigate("/contact");
+        } else if (matchedCmd === "guestbook") {
+            playEnter();
+            navigate("/guestbook");
         } else if (matchedCmd && easterEggs[matchedCmd]) {
             setShowEasterEgg(easterEggs[matchedCmd]);
             setHistory(prev => [...prev, easterEggs[matchedCmd]]);
             setEasterEggTriggered(true);
         } else {
             // Unknown command - show suggestions
-            const allCommands = ["clear", "about", "projects", "contact", ...Object.keys(easterEggs)];
+            const allCommands = ["clear", "about", "projects", "contact", "guestbook", ...Object.keys(easterEggs)];
             const suggestions = allCommands.filter(cmd => cmd.includes(trimmed)).slice(0, 3);
             
             if (suggestions.length > 0) {
@@ -210,6 +213,10 @@ export default function Screen() {
                                         <div className="nav-item">
                                             <Link to="/contact" onClick={playEnter} onMouseEnter={() => play()}>[CONTACT]</Link>
                                             <span className="nav-desc">— Open transmission channels</span>
+                                        </div>
+                                        <div className="nav-item">
+                                            <Link to="/guestbook" onClick={playEnter} onMouseEnter={() => play()}>[GUESTBOOK]</Link>
+                                            <span className="nav-desc">— Vault visitor log</span>
                                         </div>
                                     </div>
                                     <p className="help-hint nav-menu-animated">Type HELP for available commands</p>

@@ -600,3 +600,282 @@ hr {
     0%, 100% {opacity: 1;}
     50% {opacity: 0;} /* Cursor disappears halfway through the cycle */
 }
+
+/* Admin */
+.admin-login {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-width: 480px;
+}
+
+.admin-login-field {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.admin-login-actions {
+    margin-top: 0.25rem;
+}
+
+.admin-toolbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.admin-logout {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.admin-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    margin-bottom: 0.25rem;
+}
+
+.admin-entries section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-entries .stat-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+}
+
+.admin-entry--pending {
+    border-color: #18dc0c;
+    opacity: 1;
+}
+
+.admin-entry--approved {
+    opacity: 0.6;
+}
+
+.admin-entry-actions {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 0.4rem;
+}
+
+.admin-btn-approve {
+    font-size: 0.9rem;
+}
+
+.admin-btn-reject {
+    font-size: 0.9rem;
+    opacity: 0.55;
+}
+
+.admin-btn-reject:hover:not(:disabled) {
+    opacity: 1;
+}
+
+.admin-screen .main {
+    overflow-y: auto;
+}
+
+.admin-screen .links {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .admin-screen .footer {
+        display: none;
+    }
+    .admin-login-field {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .admin-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+    .admin-entry-actions {
+        gap: 1rem;
+    }
+}
+
+/* Guestbook */
+.guestbook-form {
+    margin: 0.25rem 0 0.5rem 0;
+    flex-shrink: 0;
+}
+
+.guestbook-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.guestbook-field {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.guestbook-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #18dc0c;
+    color: #18dc0c;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.85rem;
+    text-shadow: 0 0 10px #18dc0c;
+    outline: none;
+    flex: 1;
+    padding: 0.1rem 0.25rem;
+    caret-color: #18dc0c;
+}
+
+.guestbook-input::placeholder {
+    color: #18dc0c;
+    opacity: 0.35;
+}
+
+.guestbook-textarea {
+    resize: none;
+    line-height: 1.4;
+}
+
+.guestbook-form-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.guestbook-submit {
+    background: transparent;
+    border: none;
+    color: #18dc0c;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #18dc0c;
+    cursor: pointer;
+    padding: 0;
+}
+
+.guestbook-submit:hover:not(:disabled) {
+    background-color: #18dc0c;
+    color: black;
+    text-shadow: 0 0 10px black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+    background-size: 100% 4px;
+}
+
+.guestbook-submit:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.guestbook-status {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.guestbook-status--ok {
+    opacity: 0.9;
+}
+
+.guestbook-status--err {
+    color: #ff5555;
+    text-shadow: 0 0 8px #ff5555;
+}
+
+.guestbook-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    margin-bottom: 0.25rem;
+}
+
+.guestbook-entry {
+    border: 1px dashed #18dc0c;
+    padding: 0.5rem 0.75rem;
+}
+
+.guestbook-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.guestbook-entry-name {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.guestbook-entry-date {
+    font-size: 0.75rem;
+    opacity: 0.55;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.guestbook-entry-message {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0.85;
+    word-break: break-word;
+}
+
+.guestbook-screen .main {
+    overflow-y: auto;
+}
+
+.guestbook-screen .links {
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .guestbook-screen .footer {
+        display: none;
+    }
+    .guestbook-screen .links a.home-link {
+        margin-top: 0;
+    }
+    .guestbook-field {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .guestbook-field .stat-label {
+        font-size: 0.7rem;
+    }
+    .guestbook-input {
+        font-size: 0.8rem;
+    }
+    .guestbook-submit {
+        font-size: 1rem;
+    }
+    .guestbook-entry-header {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+    .guestbook-entry-name {
+        font-size: 0.8rem;
+    }
+    .guestbook-entry-message {
+        font-size: 0.75rem;
+    }
+}
