@@ -42,6 +42,14 @@ app.get("/", (req, res) => {
     res.json({ status: "ok" });
 });
 
+// Temporary: check if ADMIN_SECRET env var is set (remove after debugging)
+app.get("/api/debug-auth", (req, res) => {
+    res.json({
+        hasSecret: !!process.env.ADMIN_SECRET,
+        secretLength: process.env.ADMIN_SECRET?.length ?? 0,
+    });
+});
+
 // Proxy route for weather data. Server-side keeps the API key secret and avoids CORS issues.
 app.get('/api/weather', async (req, res) => {
     const q = req.query.q || 'auto:ip';
