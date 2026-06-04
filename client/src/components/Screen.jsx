@@ -29,8 +29,8 @@ export default function Screen() {
     // Easter eggs
     const easterEggs = {
         "help": "AVAILABLE COMMANDS:\n> ABOUT - Navigate to about section\n> PROJECTS - View projects\n> CONTACT - Get in touch\n> GUESTBOOK - Sign the visitor log\n> CLEAR - Clear terminal\n> WHOAMI - Identify user\n> STAT - Display system stats\n> HACK - Attempt vault hack...",
-        "whoami": "USER: Rolando Carpio\nSTATUS: Full Stack Developer\nLOCATION: The Wasteland\nAFFILIATION: Vault 101",
-        "stat": "SYSTEM STATS:\n- STRENGTH: 6/10\n- PERCEPTION: 7/10\n- ENDURANCE: 8/10\n- CHARISMA: 6/10\n- INTELLIGENCE: 8/10\n- AGILITY: 7/10\n- LUCK: 10/10",
+        "whoami": "USER: Rolando Carpio\nSTATUS: Frontend Developer\nLOCATION: The Wasteland\nAFFILIATION: Vault 101",
+        "stat": "SYSTEM STATS:\n- STRENGTH: 7/10\n- PERCEPTION: 7/10\n- ENDURANCE: 8/10\n- CHARISMA: 7/10\n- INTELLIGENCE: 8/10\n- AGILITY: 7/10\n- LUCK: 10/10",
         "hack": "INITIATING VAULT HACK SEQUENCE...\n[████████░░] 80%\n[ERROR] Admin authentication required\nHACK FAILED - Vault secure",
         "ascii": `
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
