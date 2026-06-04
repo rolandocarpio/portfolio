@@ -8,8 +8,20 @@ import "../styles.css";
 
 const projects = [
     {
-        id: "uliv",
+        id: "weedmaps",
         file: "FILE_001",
+        title: "WEEDMAPS.COM/SPORTS",
+        type: "WEBSITE DEVELOPMENT",
+        status: "COMPLETE",
+        tech: "PHP / WORDPRESS / CSS / HTML / JS",
+        description:
+            "Rebuilt the sports section of Weedmaps.com, a leading cannabis industry platform, to create a more engaging and user-friendly experience for sports fans interested in cannabis-related content. New Figma designs provided by an internal design team were implemented to enhance the layout, styling, and overall user experience of the sports section.",
+        url: "https://weedmaps.com/sports",
+        preview: "/images/weedmaps-thumb.png",
+    },
+    {
+        id: "uliv",
+        file: "FILE_002",
         title: "ULIV.COM",
         type: "WEBSITE REDESIGN",
         status: "COMPLETE",
@@ -21,7 +33,7 @@ const projects = [
     },
     {
         id: "teton",
-        file: "FILE_002",
+        file: "FILE_003",
         title: "TETONEXPEDITIONS.COM",
         type: "WEBSITE DEVELOPMENT",
         status: "COMPLETE",
