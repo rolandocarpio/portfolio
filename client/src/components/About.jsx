@@ -21,7 +21,7 @@ export default function About() {
                 <div className="about-section">
                     <div className="about-text">
                         <p className="about-bio">
-                            Frontend developer based in Los Angeles, CA.
+                            Frontend developer based in Los Angeles, CA. I love playing Fallout, but Overwatch will always have a special place in my heart. I nerd out when playing competitive Overwatch and have a deep appreciation for the design and polish of the game. I try to bring that same level of care and attention to detail to my work as a developer, crafting clean and engaging user experiences. When I'm not coding, you can find me hiking in the mountains, exploring streetwear fashion, or indulging in my love for hot dogs.
                         </p>
                         <div className="about-stats">
                             <div className="about-stat">
@@ -50,9 +50,36 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <motion.div whileHover={{scale: 1.5}} className="about-image">
+                    <motion.div whileHover={{scale: 1.5}} style={{transformOrigin: "top right"}} className="about-image">
                         <img src="/images/pfp.jpg" alt="Rolando Carpio profile" />
                     </motion.div>
+                </div>
+                <div className="about-ow-section">
+                    <span className="stat-label">&gt; OVERWATCH — COMBAT PROFILE</span>
+                    <div className="ow-video-wrapper">
+                        <iframe
+                            title="Overwatch highlight"
+                            src="https://player.vimeo.com/video/1198618548?h=9139db7fb0"
+                            frameBorder="0"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                            allowFullScreen
+                        />
+                    </div>
+                    <div className="about-stats">
+                        <div className="about-stat">
+                            <span className="stat-label">HOURS......:</span>
+                            <span className="stat-value">2,211</span>
+                        </div>
+                        <div className="about-stat">
+                            <span className="stat-label">RANK.......:</span>
+                            <span className="stat-value">Grandmaster</span>
+                        </div>
+                        <div className="about-stat">
+                            <span className="stat-label">TOP HEROES.:</span>
+                            <span className="stat-value">Illari / Pharah / Venture</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="links">
                     <Link to="/" onClick={playEnter} onMouseEnter={() => play()}>[HOME]</Link>

@@ -104,7 +104,7 @@ hr {
 
 .about-text {
     flex: 1 1 60%;
-    min-width: 180px;
+    min-width: 140px;
 }
 
 .about-pre {
@@ -152,6 +152,34 @@ hr {
     gap: 0.4rem;
 }
 
+.about-screen .main {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.about-ow-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.ow-video-wrapper {
+    position: relative;
+    width: 95%;
+    padding-top: 53.4375%; /* 56.25% of 95% to maintain 16:9 */
+    border: 1px dashed #18dc0c;
+    opacity: 0.85;
+}
+
+.ow-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .about-skills {
     display: flex;
     flex-wrap: wrap;
@@ -172,7 +200,6 @@ hr {
     align-items: flex-start;
     justify-content: center;
     min-width: 120px;
-    margin-left: auto; /* push the image to the right side */
 }
 
 .about-image img {
