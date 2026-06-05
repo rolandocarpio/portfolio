@@ -44,7 +44,7 @@ export default function About() {
                         <div className="about-skills-section">
                             <span className="stat-label">&gt; SKILLS</span>
                             <div className="about-skills">
-                                {["JavaScript", "React", "Node.js", "Express", "MongoDB", "HTML", "CSS", "PHP", "WordPress"].map((s) => (
+                                {["JavaScript", "React", "Node.js", "Express", "MongoDB", "HTML", "CSS", "PHP", "WordPress", "Shopify", "Figma", "Git"].map((s) => (
                                     <span className="skill-tag" key={s}>{s}</span>
                                 ))}
                             </div>
