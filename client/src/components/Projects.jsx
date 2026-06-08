@@ -53,7 +53,7 @@ export default function Projects() {
         <div className="screen projects-screen">
             <div className="main">
                 <div className="header">
-                    <h1>PROJECTS</h1>
+                    <h1>WORK</h1>
                 </div>
                 <hr />
                 <div className="projects-list">
@@ -75,6 +75,7 @@ export default function Projects() {
                                     src={p.preview}
                                     alt={`${p.title} preview`}
                                     className="project-preview"
+                                    loading="lazy"
                                 />
                             )}
                             <p className="project-desc">{p.description}</p>

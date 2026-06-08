@@ -16,7 +16,7 @@ export default function AnimatedRoutes() {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<PageWrapper><Screen /></PageWrapper>} />
                 <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-                <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
+                <Route path="/work" element={<PageWrapper><Projects /></PageWrapper>} />
                 <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
                 <Route path="/guestbook" element={<PageWrapper><Guestbook /></PageWrapper>} />
                 <Route path="/admin" element={<PageWrapper><Admin /></PageWrapper>} />

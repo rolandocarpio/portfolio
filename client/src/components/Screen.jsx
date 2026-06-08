@@ -28,7 +28,7 @@ export default function Screen() {
 
     // Easter eggs
     const easterEggs = {
-        "help": "AVAILABLE COMMANDS:\n> ABOUT - Navigate to about section\n> PROJECTS - View projects\n> CONTACT - Get in touch\n> GUESTBOOK - Sign the visitor log\n> CLEAR - Clear terminal\n> WHOAMI - Identify user\n> STAT - Display system stats\n> HACK - Attempt vault hack...",
+        "help": "AVAILABLE COMMANDS:\n> ABOUT - Navigate to about section\n> WORK - View work\n> CONTACT - Get in touch\n> GUESTBOOK - Sign the visitor log\n> CLEAR - Clear terminal\n> WHOAMI - Identify user\n> STAT - Display system stats\n> HACK - Attempt vault hack...",
         "whoami": "USER: Rolando Carpio\nSTATUS: Frontend Developer\nLOCATION: The Wasteland\nAFFILIATION: Vault 101",
         "stat": "SYSTEM STATS:\n- STRENGTH: 7/10\n- PERCEPTION: 7/10\n- ENDURANCE: 8/10\n- CHARISMA: 7/10\n- INTELLIGENCE: 8/10\n- AGILITY: 7/10\n- LUCK: 10/10",
         "hack": "INITIATING VAULT HACK SEQUENCE...\n[████████░░] 80%\n[ERROR] Admin authentication required\nHACK FAILED - Vault secure",
@@ -116,7 +116,7 @@ export default function Screen() {
     // Find matching command with partial input
     const findMatchingCommand = (input) => {
         const trimmed = input.trim().toLowerCase();
-        const allCommands = ["clear", "about", "projects", "contact", "guestbook", ...Object.keys(easterEggs)];
+        const allCommands = ["clear", "about", "work", "contact", "guestbook", ...Object.keys(easterEggs)];
         
         // Exact match
         if (allCommands.includes(trimmed)) {
@@ -146,9 +146,9 @@ export default function Screen() {
         } else if (matchedCmd === "about") {
             playEnter();
             navigate("/about");
-        } else if (matchedCmd === "projects") {
+        } else if (matchedCmd === "work") {
             playEnter();
-            navigate("/projects");
+            navigate("/work");
         } else if (matchedCmd === "contact") {
             playEnter();
             navigate("/contact");
@@ -161,7 +161,7 @@ export default function Screen() {
             setEasterEggTriggered(true);
         } else {
             // Unknown command - show suggestions
-            const allCommands = ["clear", "about", "projects", "contact", "guestbook", ...Object.keys(easterEggs)];
+            const allCommands = ["clear", "about", "work", "contact", "guestbook", ...Object.keys(easterEggs)];
             const suggestions = allCommands.filter(cmd => cmd.includes(trimmed)).slice(0, 3);
             
             if (suggestions.length > 0) {
@@ -207,7 +207,7 @@ export default function Screen() {
                                             <span className="nav-desc">— Personnel file</span>
                                         </div>
                                         <div className="nav-item">
-                                            <Link to="/projects" onClick={playEnter} onMouseEnter={() => play()}>[PROJECTS]</Link>
+                                            <Link to="/work" onClick={playEnter} onMouseEnter={() => play()}>[WORK]</Link>
                                             <span className="nav-desc">— Completed assignments</span>
                                         </div>
                                         <div className="nav-item">
