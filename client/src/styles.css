@@ -10,6 +10,29 @@ body {
     /* cursor: url("/nuke.png"), auto; */
 }
 
+/* Pip-boy themed scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #18dc0c #11291b;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #11291b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #18dc0c;
+    box-shadow: 0 0 6px #18dc0c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 12px #18dc0c;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -155,6 +178,7 @@ hr {
 .about-screen .main {
     overflow-y: auto;
     overflow-x: hidden;
+    padding-right: 0.5rem;
 }
 
 .about-ow-section {
@@ -405,6 +429,7 @@ hr {
 .projects-screen .main {
     overflow-y: auto;
     overflow-x: hidden;
+    padding-right: 0.5rem;
 }
 
 .project-card {
@@ -664,6 +689,7 @@ hr {
     flex: 1;
     min-height: 0;
     margin-bottom: 0.25rem;
+    padding-right: 0.5rem;
 }
 
 .admin-entries section {
@@ -824,6 +850,7 @@ hr {
     flex: 1;
     min-height: 0;
     margin-bottom: 0.25rem;
+    padding-right: 0.5rem;
 }
 
 .guestbook-entry {
