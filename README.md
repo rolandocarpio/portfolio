@@ -4,10 +4,10 @@
 A retro-futuristic personal portfolio inspired by my time hacking terminals in _Fallout 4_. Featuring glowing green CRT graphics, scanlines, terminal animations, and immersive UI components. All powered by React, Vite, and an Express backend.
 
 A modern developer portfolio as if it were running in an abandoned Vault-Tec workstation... still active after 200 years.
-# 📟 LIVE SYSTEM ACCESS
+# LIVE SYSTEM ACCESS
 → [Launch Terminal Interface](https://rolandocarpio.onrender.com/)
 
-# 🎨 FEATURES
+# FEATURES
 * Authentic Fallout Terminal UI
 
   CRT scanlines, phosphor glow, monospaced typography, and custom pixel-style assets to mimic the in-game terminals.
@@ -24,7 +24,7 @@ A modern developer portfolio as if it were running in an abandoned Vault-Tec wor
 
   Fully responsive terminal layout functioning seamlessly on desktop and mobile.
 
-# 🛠️ TECH STACK
+# TECH STACK
 **Frontend**
 
 * React
@@ -42,7 +42,7 @@ A modern developer portfolio as if it were running in an abandoned Vault-Tec wor
 * npm
 * Git
 
-# ▶️ INSTALLATION PROTOCOL
+# INSTALLATION PROTOCOL
 **1. Clone the repository**
 
 git clone https://github.com/rolandocarpio/portfolio.git  
@@ -60,13 +60,13 @@ cd ../server
 npm install  
 npm start
 
-# 📦 BUILD FOR PRODUCTION
+# BUILD FOR PRODUCTION
 cd client  
 npm run build
 
 The production files will be output to `/dist`.
 
-# 📫 CONTACT THE OPERATOR
+# CONTACT THE OPERATOR
 **Rolando Carpio**  
 Email: rcarpiodev@gmail.com
 
